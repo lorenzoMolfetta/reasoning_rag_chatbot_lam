@@ -92,8 +92,13 @@ Per abilitare le funzionalità di ricerca web, dovrai configurare l'API di Googl
 
 ### Configurazione del Container AutoGen
 
-Utilizza il seguente comando per avviare AutoGen Studio in un container Docker:
+Creiamo l'immagine docker necessaria per lanciare AutoGen in locale.
 
+```bash
+docker build -f build/Dockerfile -t autogen_image .
+```
+
+Ora possiamo lanciare il container con il deployment della webapp AutoGen.
 ```bash
 docker run -d \
        --name autogen \
